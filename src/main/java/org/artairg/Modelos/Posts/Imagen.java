@@ -5,11 +5,13 @@ import org.artairg.Modelos.Comentario.Comentarios;
 
 import java.lang.reflect.Type;
 
-public class Imagen extends Post implements JsonSerializer<Texto>, JsonDeserializer<Texto> {
+public class Imagen extends Post implements JsonSerializer<Imagen>, JsonDeserializer<Imagen> {
     private String url;
     private int ancho;
     private int alto;
-
+    public Imagen() {
+        super(null,null);
+    }
     public Imagen(String titulo, Comentarios comentarios, String url, int ancho, int alto) {
         super(titulo, comentarios);
         this.url = url;
@@ -38,12 +40,24 @@ public class Imagen extends Post implements JsonSerializer<Texto>, JsonDeseriali
     }
 
     @Override
-    public Texto deserialize(JsonElement jsonElement, Type type, JsonDeserializationContext jsonDeserializationContext) throws JsonParseException {
-        return null;
+    public Imagen deserialize(JsonElement json, Type typeOfT, JsonDeserializationContext context) throws JsonParseException {
+        JsonObject jsonObject = json.getAsJsonObject();
+        String titulo = jsonObject.get("titulo").getAsString();
+        Comentarios comentarios = context.deserialize(jsonObject.get("comentarios"), Comentarios.class);
+        String url = jsonObject.get("url").getAsString();
+        int ancho = jsonObject.get("ancho").getAsInt();
+        int alto = jsonObject.get("alto").getAsInt();
+        return new Imagen(titulo, comentarios, url, ancho, alto);
     }
 
     @Override
-    public JsonElement serialize(Texto texto, Type type, JsonSerializationContext jsonSerializationContext) {
-        return null;
+    public JsonElement serialize(Imagen imagen, Type type, JsonSerializationContext context) {
+        JsonObject jsonObject = new JsonObject();
+        jsonObject.addProperty("titulo", imagen.getTitulo());
+        jsonObject.add("comentarios", context.serialize(imagen.getComentarios()));
+        jsonObject.addProperty("url", imagen.getUrl());
+        jsonObject.addProperty("ancho", imagen.getAncho());
+        jsonObject.addProperty("alto", imagen.getAlto());
+        return jsonObject;
     }
 }

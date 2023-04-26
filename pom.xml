@@ -30,5 +30,12 @@
             <version>RELEASE</version>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.danilopianini/gson-extras -->
+        <dependency>
+            <groupId>org.danilopianini</groupId>
+            <artifactId>gson-extras</artifactId>
+            <version>1.2.0</version>
+        </dependency>
+
     </dependencies>
 </project>

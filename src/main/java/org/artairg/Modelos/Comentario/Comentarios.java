@@ -15,6 +15,14 @@ public class Comentarios {
         listaComentarios.add(comentario);
     }
 
+    public List<Comentario> getListaComentarios() {
+        return listaComentarios;
+    }
+
+    public void setListaComentarios(List<Comentario> listaComentarios) {
+        this.listaComentarios = listaComentarios;
+    }
+
     public void mostrarComentarios() {
         if (listaComentarios.isEmpty()) {
             System.out.println("No hay comentarios.");
@@ -28,25 +36,3 @@ public class Comentarios {
     }
 }
 
-class Comentario {
-    private String texto;
-    private LocalDateTime fecha;
-
-    public Comentario(String texto) {
-        this.texto = texto;
-        this.fecha = LocalDateTime.now();
-    }
-
-    public String getTexto() {
-        return texto;
-    }
-
-    public LocalDateTime getFecha() {
-        return fecha;
-    }
-
-    public void mostrarComentario() {
-        System.out.println("Fecha: " + fecha);
-        System.out.println("Comentario: " + texto);
-    }
-}
