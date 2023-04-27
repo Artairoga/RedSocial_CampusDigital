@@ -60,7 +60,6 @@ public class JsonUtilsTest {
 
         // Recuperamos los objetos
         List<Post> postsRecuperados = JsonUtils.cargar(RUTA_ARCHIVO, ArrayList.class);
-
         // Comprobamos que los objetos se hayan recuperado correctamente
         assertNotNull(postsRecuperados);
         assertEquals(posts.size(), postsRecuperados.size());
