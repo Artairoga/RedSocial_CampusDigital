@@ -1,14 +1,5 @@
 package Modelos.Data;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-
 import org.artairg.Modelos.Comentario.Comentario;
 import org.artairg.Modelos.Comentario.Comentarios;
 import org.artairg.Modelos.Data.JsonUtils;
@@ -19,6 +10,13 @@ import org.artairg.Modelos.Posts.Video;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.junit.Assert.*;
 
 public class JsonUtilsTest {
 

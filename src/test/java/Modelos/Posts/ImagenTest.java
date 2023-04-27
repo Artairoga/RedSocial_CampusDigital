@@ -1,9 +1,7 @@
 package Modelos.Posts;
 
-import org.artairg.Modelos.Comentario.Comentario;
 import org.artairg.Modelos.Comentario.Comentarios;
 import org.artairg.Modelos.Posts.Imagen;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

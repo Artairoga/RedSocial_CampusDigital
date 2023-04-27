@@ -1,9 +1,6 @@
 package org.artairg.Modelos.Posts;
 
 import org.artairg.Modelos.Comentario.Comentarios;
-import com.google.gson.*;
-
-import java.lang.reflect.Type;
 
 //Post. Contendrá fecha y lista de comentarios. Además, podrá ser un texto (que deberá tener un String con el contenido),
 // una imagen (deberá tener un título y dimensiones) o un vídeo (que tendrá título, calidad y duración en segundos).

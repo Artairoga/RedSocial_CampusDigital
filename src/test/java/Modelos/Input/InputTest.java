@@ -2,10 +2,11 @@ package Modelos.Input;
 
 import org.artairg.Modelos.Input.Input;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class InputTest {
 

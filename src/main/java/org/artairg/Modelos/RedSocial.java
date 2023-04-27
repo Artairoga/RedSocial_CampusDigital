@@ -1,7 +1,6 @@
 package org.artairg.Modelos;
 
 
-import com.google.gson.*;
 import org.artairg.Modelos.Comentario.Comentarios;
 import org.artairg.Modelos.Input.Input;
 import org.artairg.Modelos.Posts.Imagen;
@@ -10,7 +9,6 @@ import org.artairg.Modelos.Posts.Texto;
 import org.artairg.Modelos.Posts.Video;
 import org.artairg.Modelos.Usuario.Usuarios;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.Map;
 
